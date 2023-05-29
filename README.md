@@ -20,4 +20,5 @@ Differences from the default theme:
 - Line numbers are decorated;
 - The text is justified (except for code blocks);
 - The code blocks are made darker, and the colors mimic VS Code;
+- Images have max-height;
 - Headings have the size of the main text and are highlighted with a border.
