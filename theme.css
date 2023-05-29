@@ -143,6 +143,8 @@ body:not(.native-scrollbars) .modal-close-button {
 .status-bar {
 	/* Remove padding in Status Bar */
 	padding: 0;
+	border-right: var(--strict-separator);
+	border-bottom: var(--strict-separator);
 }
 
 .menu {
@@ -214,8 +216,13 @@ input, textarea {
 }
 
 /* Border above the app header */
-.app-container, .titlebar-button {
+.app-container {
+	border: var(--strict-separator);
+}
+
+.titlebar-button {
 	border-top: var(--strict-separator);
+	border-right: var(--strict-separator);
 }
 
 /* Buttons in the right upper corner */
@@ -315,6 +322,7 @@ input, textarea {
 
 /* Vertical align each line number*/
 .cm-lineNumbers > .cm-gutterElement {
+	padding: 0 !important;
 	line-height: 20px !important;
 }
 
