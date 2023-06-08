@@ -365,11 +365,6 @@ input, textarea {
     display: inline-block !important;
     width: 34px !important;
 }
-
-.markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-list-line {
-    padding-inline-start: 34px !important;
-    text-indent: -34px !important;
-}
 /* ======================================== */
 
 /* ======================================== */
