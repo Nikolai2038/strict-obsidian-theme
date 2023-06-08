@@ -540,9 +540,14 @@ pre {
 /* ======================================== */
 /* Embed containers */
 /* ======================================== */
-.internal-embed {
-    /* Limit the height for all embedded containers (e.g. PDF) */
-    max-height: 400px !important;
+/* Limit the height for PDF containers */
+.pdf-embed {
+    max-height: 800px !important;
+}
+
+.image-embed {
+    /* Allows you to fix a strange image offset to the right of the link to it when there is an indent in front of the link */
+    display: block !important;
 }
 
 .image-embed img {
@@ -550,17 +555,5 @@ pre {
     max-height: 200px !important;
     /* Border for images */
     border: var(--strict-separator);
-}
-
-.markdown-embed {
-    /* For markdown embedded notes do not limit the height */
-    max-height: none !important;
-}
-
-.image-embed {
-    /* Built-in image containers are not limited */
-    max-height: 100% !important;
-    /* Allows you to fix a strange image offset to the right of the link to it when there is an indent in front of the link */
-    display: block !important;
 }
 /* ======================================== */
