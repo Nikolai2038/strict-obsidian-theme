@@ -359,15 +359,6 @@ input, textarea {
 /* ======================================== */
 
 /* ======================================== */
-/* Correction of alignment of list items in edit mode */
-/* ======================================== */
-.markdown-source-view.mod-cm6 .cm-formatting-list-ul, .markdown-source-view.mod-cm6 .cm-formatting-list-ol {
-    display: inline-block !important;
-    width: 34px !important;
-}
-/* ======================================== */
-
-/* ======================================== */
 /* Code block in edit mode */
 /* ======================================== */
 .HyperMD-codeblock {
@@ -550,5 +541,14 @@ pre {
     max-height: 200px !important;
     /* Border for images */
     border: var(--strict-separator);
+}
+/* ======================================== */
+
+/* ======================================== */
+/* Tables */
+/* ======================================== */
+.markdown-rendered table {
+	/* Remove top margin */
+	margin-block-start: 0;
 }
 /* ======================================== */
