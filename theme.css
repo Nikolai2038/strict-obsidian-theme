@@ -119,6 +119,9 @@ body {
 
     /* Status Bar */
     --status-bar-radius: 0;
+
+    /* Properties */
+    --metadata-property-radius: 0;
     /* ======================================== */
 
     /* Paddings in editor */
@@ -577,5 +580,27 @@ pre {
 .workspace-tab-header-inner {
     /* Remove gap between tab header and close button */
     gap: 0;
+}
+/* ======================================== */
+
+/* ======================================== */
+/* Properties */
+/* ======================================== */
+.metadata-container {
+    border-bottom: var(--strict-separator);
+
+    /* More clear paddings */
+    margin-block-end: 0;
+    --metadata-padding: 8px 32px;
+}
+
+.metadata-properties-heading {
+    /* Remove extra margins */
+    margin-bottom: 0;
+}
+
+.metadata-container .metadata-add-button {
+    /* Remove extra margins */
+    margin-top: 0;
 }
 /* ======================================== */
