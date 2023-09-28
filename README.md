@@ -2,15 +2,15 @@
 
 Simple compact strict dark theme for Obsidian.
 
-View Mode:
+## View Mode
 
 ![View Mode](screenshot_view_mode.png)
 
-Edit Mode:
+## Edit Mode
 
 ![Edit Mode](screenshot_edit_mode.png)
 
-Differences from the default theme:
+## Differences from the default theme
 
 - The corners of many elements are pointed;
 - Animations are disabled;
