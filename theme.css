@@ -164,6 +164,11 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
 body:not(.native-scrollbars) .modal-close-button {
     right: calc(var(--sctric-scroller-width) + 6px);
 }
+
+/* Hide scroller when don't needed */
+.markdown-source-view.mod-cm6 .cm-scroller {
+	 scrollbar-gutter: auto;
+}
 /* ======================================== */
 
 /* ======================================== */
