@@ -131,6 +131,9 @@ body {
     --header-height: 32px;
     --tab-width: 128px;
 
+	/* Decrease extra spacing from headers in reading view */
+	--heading-spacing: 16px;
+
     /* Scrollbar width */
     --sctric-scroller-width: 12px;
 
