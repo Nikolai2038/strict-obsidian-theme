@@ -166,7 +166,8 @@ body:not(.native-scrollbars) .modal-close-button {
 }
 
 /* Hide scroller when don't needed */
-.markdown-source-view.mod-cm6 .cm-scroller {
+.markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-preview-view {
 	 scrollbar-gutter: auto;
 }
 /* ======================================== */
