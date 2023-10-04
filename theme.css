@@ -338,7 +338,11 @@ input, textarea {
 /* Titles in edit mode and in view mode */
 .HyperMD-header, h1, h2, h3, h4, h5, h6 {
     border: var(--strict-separator);
-    padding: 0 8px !important;
+	padding: 0 var(--size-2-2) !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-content > .HyperMD-header {
+	margin: 0 calc(-1 * var(--size-2-2)) !important;
 }
 /* ======================================== */
 
@@ -387,6 +391,11 @@ input, textarea {
 .cm-s-obsidian div.HyperMD-codeblock-end-bg {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+	padding: 0 var(--size-2-2) !important;
+	margin: 0 calc(-1 * var(--size-2-2)) !important;
 }
 /* ======================================== */
 
