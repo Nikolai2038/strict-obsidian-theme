@@ -2,17 +2,17 @@
 
 Simple compact strict dark theme for Obsidian.
 
-## View Mode
+## Reading view
 
-![View Mode](images/screenshot_view_mode.png)
+![Reading view](images/screenshot_view_mode.png)
 
-## Source Mode
+## Editing view
 
-![Source Mode](images/screenshot_source_mode.png)
+![Editing view](images/screenshot_edit_mode.png)
 
-## Edit Mode
+## Editing view with source mode
 
-![Edit Mode](images/screenshot_edit_mode.png)
+![Editing view with source mode](images/screenshot_source_mode.png)
 
 ## Differences from the default theme
 
@@ -24,5 +24,5 @@ Simple compact strict dark theme for Obsidian.
 - Line numbers are decorated;
 - The text is justified (except for code blocks);
 - The code blocks are made darker, and the colors mimic VS Code;
-- Images have max-height;
+- Images have max-height (it is assumed to use [Image Toolkit](https://github.com/sissilab/obsidian-image-toolkit) plugin to view them);
 - Headings have the size of the main text and are highlighted with a border.
