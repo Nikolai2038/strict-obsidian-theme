@@ -295,7 +295,7 @@ input, textarea {
     padding-right: 4px;
 }
 
-/* Vertical align each line number*/
+/* Vertical align each line number */
 .cm-lineNumbers > .cm-gutterElement {
     padding: 0 2px 0 6px !important;
     line-height: 20px !important;
@@ -305,6 +305,14 @@ input, textarea {
 .ͼ1 .cm-gutter {
     height: 100%;
     border-bottom: 1px double var(--color-base-30);
+}
+
+/* Keep left padding for content when line numbers are hidden */
+.markdown-source-view.mod-cm6 .cm-gutters {
+	padding-inline-end: 0;
+}
+.cm-content {
+	padding-left: var(--file-folding-offset) !important;
 }
 /* ======================================== */
 
