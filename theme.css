@@ -62,7 +62,7 @@ body {
     --strict-color-separator: #404040;
 
     /* Separator */
-    --strict-separator: 1px solid var(--strict-color-separator);
+	--strict-separator: 1px solid var(--strict-color-separator);
 
     --tab-outline-color: var(--strict-color-separator);
     --divider-color: var(--strict-color-separator);
@@ -367,13 +367,23 @@ input, textarea {
 }
 
 /* Titles in edit mode and in view mode */
-.HyperMD-header, h1, h2, h3, h4, h5, h6 {
+.HyperMD-header, h1, h2, h3, h4, h5, h6, .setting-item-heading {
     border: var(--strict-separator);
 	padding: 0 var(--size-2-2) !important;
 }
 
+.setting-item-heading {
+	border-top: var(--strict-separator) !important;
+	border-bottom: none;
+}
+
 .markdown-source-view.mod-cm6 .cm-content > .HyperMD-header {
 	margin: 0 calc(-1 * var(--size-2-2)) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0 !important;
+	width: 100%;
 }
 /* ======================================== */
 
