@@ -266,6 +266,20 @@ input, textarea {
 .titlebar-button {
     padding: 0 12px !important;
 }
+
+.workspace .mod-root .workspace-tab-header {
+	/* Set tab width to fit it's content */
+	width: auto !important;
+	/* Limit tab max width */
+	max-width: 256px;
+	/* This enables scrolling */
+	flex: none !important;
+}
+
+.workspace-tab-header-inner {
+	/* Remove gap between tab header and close button */
+	gap: 0;
+}
 /* ======================================== */
 
 /* ======================================== */
@@ -636,24 +650,6 @@ pre {
 .document-search-container {
     border-bottom: var(--strict-separator);
     margin: 0;
-}
-/* ======================================== */
-
-/* ======================================== */
-/* Tabs */
-/* ======================================== */
-.workspace .mod-root .workspace-tab-header {
-    /* Set tab width to fit it's content */
-    width: auto !important;
-    /* Limit tab max width */
-    max-width: 256px;
-    /* This enables scrolling */
-    flex: none !important;
-}
-
-.workspace-tab-header-inner {
-    /* Remove gap between tab header and close button */
-    gap: 0;
 }
 /* ======================================== */
 
