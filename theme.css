@@ -405,8 +405,8 @@ h1, h2, h3, h4, h5, h6 {
     text-align: justify;
 }
 
-/* Code block in edit mode */
-.HyperMD-codeblock {
+/* Code block and list item in edit mode */
+.HyperMD-codeblock, .HyperMD-list-line {
     text-align: left;
 }
 /* ======================================== */
