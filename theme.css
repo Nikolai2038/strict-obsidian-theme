@@ -566,6 +566,18 @@ pre {
     --language: "Nginx";
 }
 
+.language-yaml, .language-yml {
+	--language: "YAML";
+}
+
+.language-toml {
+	--language: "TOML";
+}
+
+.language-ini {
+	--language: "INI";
+}
+
 /* Remove original text */
 .copy-code-button {
     text-indent: -9999px;
@@ -656,6 +668,20 @@ pre {
 .markdown-rendered table {
 	/* Remove top margin */
 	margin-block-start: 0;
+}
+
+/* Always show table buttons in edit mode */
+.table-row-drag-handle,
+.table-col-drag-handle,
+.table-col-btn,
+.table-row-btn {
+	opacity: 1.0 !important;
+}
+
+/* Change cursor for buttons */
+.table-col-btn,
+.table-row-btn {
+	cursor: var(--cursor-link) !important;
 }
 /* ======================================== */
 
