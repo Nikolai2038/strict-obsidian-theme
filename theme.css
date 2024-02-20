@@ -334,10 +334,13 @@ input, textarea {
 
 /* Keep left padding for content when line numbers are hidden */
 .markdown-source-view.mod-cm6 .cm-gutters {
-	padding-inline-end: 0;
+	margin-inline-end: 0;
 }
 .cm-content {
 	padding-left: var(--file-folding-offset) !important;
+}
+.cm-content .cm-lineWrapping {
+	padding-left: 0 !important;
 }
 /* ======================================== */
 
