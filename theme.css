@@ -147,6 +147,8 @@ body {
 
     /* Make code text same size as normal text */
     --code-size: var(--font-text-size);
+
+    --ribbon-padding: 0;
 }
 
 /* ======================================== */
@@ -173,7 +175,7 @@ body:not(.native-scrollbars) .modal-close-button {
 /* Hide scroller when don't needed */
 .markdown-source-view.mod-cm6 .cm-scroller,
 .markdown-preview-view {
-	 scrollbar-gutter: auto;
+	scrollbar-gutter: auto;
 }
 /* ======================================== */
 
@@ -220,11 +222,57 @@ input, textarea {
 
 .nav-header {
     border-bottom: var(--strict-separator);
-    padding: 4px;
+    padding: 0;
 }
 
 .nav-files-container {
     padding: 0;
+}
+
+.workspace-tab-header-container  {
+    padding-left: 0 !important;
+    padding-right: 0;
+}
+
+.mod-left-split .workspace-tab-header-container-inner, .mod-right-split .workspace-tab-header-container-inner {
+    padding: 0;
+    margin: 0;
+    gap: 0;
+}
+
+.side-dock-settings .side-dock-ribbon-action, .side-dock-actions .side-dock-ribbon-action {
+    margin: 0;
+    height: var(--ribbon-width);
+}
+
+/* Remove gap between ribbon buttons */
+.side-dock-settings, .side-dock-actions {
+    gap: 0;
+}
+/* ======================================== */
+
+/* ======================================== */
+/* YAML properties */
+/* ======================================== */
+.metadata-container {
+    /* Remove padding */
+    --metadata-padding: 0 !important;
+
+    /* Add all borders */
+    border: var(--strict-separator);
+
+    /* Add margin after YAML properties */
+    margin-bottom: var(--file-folding-offset) !important;
+}
+
+/* Remove padding */
+.markdown-source-view .metadata-container, .markdown-preview-view .metadata-container {
+    transform: none !important;
+}
+
+.mod-header > .inline-title {
+    /* Add margin after inline title */
+    margin-bottom: var(--file-folding-offset) !important;
 }
 /* ======================================== */
 
