@@ -270,8 +270,6 @@ input, textarea {
 }
 
 .workspace .mod-root .workspace-tab-header {
-	/* Set tab width to fit it's content */
-	width: auto !important;
 	/* Limit tab max width */
 	max-width: 256px;
 	/* This enables scrolling */
