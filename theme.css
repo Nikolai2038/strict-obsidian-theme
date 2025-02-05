@@ -436,6 +436,12 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 0 !important;
 	width: 100%;
 }
+
+/* Color for headings */
+.markdown-source-view.mod-cm6 .cm-content > .HyperMD-header, h1,h2,h3,h4,h5,h6,
+.setting-item-heading > .setting-item-info > .setting-item-name {
+    color: #00bb00 !important;
+}
 /* ======================================== */
 
 /* ======================================== */
