@@ -221,7 +221,6 @@ input, textarea {
 }
 
 .nav-header {
-    border-bottom: var(--strict-separator);
     padding: 0;
 }
 
@@ -244,10 +243,71 @@ input, textarea {
     margin: 0;
     height: var(--ribbon-width);
 }
+/* ======================================== */
 
+/* Make file tree more compact */
+.tree-item-self {
+    padding: 2px 0px 2px 20px !important;
+}
+
+/* ======================================== */
+/* App ribbon */
+/* ======================================== */
 /* Remove gap between ribbon buttons */
 .side-dock-settings, .side-dock-actions {
     gap: 0;
+}
+
+.nav-buttons-container {
+    /* Remove gap between ribbon buttons */
+    gap: 0;
+
+    /* Align hight with file header */
+    /* height: var(--header-height); */
+    height: 31px;
+
+    border-bottom: var(--strict-separator);
+}
+/* ======================================== */
+
+/* ======================================== */
+/* Inline title */
+/* ======================================== */
+.view-header {
+    /* Remove left and right paddings from inline header */
+    padding: 0;
+}
+/* ======================================== */
+
+/* ======================================== */
+/* Inline title - Left side buttons */
+/* ======================================== */
+.view-header-nav-buttons {
+    /* Remove extra paddings around buttons */
+    align-items: normal;
+    /* Makes buttons bigger */
+    --icon-size: var(--icon-m);
+}
+
+.view-header-left {
+    /* Remove extra paddings around buttons */
+    align-items: normal;
+}
+/* ======================================== */
+
+/* ======================================== */
+/* Inline title - Right side buttons */
+/* ======================================== */
+.view-actions {
+    /* Remove extra paddings around buttons */
+    align-items: normal;
+    /* Makes buttons bigger */
+    --icon-size: var(--icon-m);
+}
+
+.view-action:not(:last-child) {
+    /* Remove space between buttons */
+    margin-right: 0;
 }
 /* ======================================== */
 
@@ -279,6 +339,48 @@ input, textarea {
 /* ======================================== */
 /* Tabs */
 /* ======================================== */
+.workspace-tab-header-tab-list {
+    margin-inline-end: 0;
+    padding: 0;
+    /* Remove extra paddings around buttons */
+    align-items: normal;
+}
+
+.workspace-tab-header-tab-list > .clickable-icon,
+.workspace-tab-header-new-tab > .clickable-icon {
+    width: 30px;
+}
+
+.workspace-tab-header-tab-list > .clickable-icon {
+    border-left: var(--strict-separator);
+}
+
+.workspace-tab-header-new-tab {
+    padding: 0;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+    /* Remove extra paddings around buttons */
+    align-items: normal;
+}
+
+/* Remove right padding after last tab */
+.mod-root .workspace-tab-header-container-inner {
+    padding: 0 !important;
+}
+
+/* Contrast color for close tab button */
+.workspace-tab-header-inner-close-button:hover {
+    background-color: var(--strict-color-1);
+}
+
+.mod-top-left-space {
+    border-right: var(--strict-separator);
+}
+
+.mod-top-right-space {
+    border-left: var(--strict-separator);
+}
+
 .workspace-tab-header-container-inner {
     margin: 0;
     padding: 1px 15px 0 0;
@@ -517,8 +619,6 @@ pre {
 .markdown-source-view.mod-cm6 .code-block-flair,
 .markdown-rendered button.copy-code-button {
     padding: 4px 8px;
-    /* Hand cursor on hover */
-    cursor: var(--cursor-link);
 }
 
 /* Make copy button always displayed in view mode */
@@ -729,12 +829,6 @@ pre {
 .table-row-btn {
 	opacity: 1.0 !important;
 }
-
-/* Change cursor for buttons */
-.table-col-btn,
-.table-row-btn {
-	cursor: var(--cursor-link) !important;
-}
 /* ======================================== */
 
 /* ======================================== */
@@ -773,9 +867,21 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 	box-shadow: none !important;
 }
 
-/* Hand as cursor when hovering breadcrumbs */
-.view-header-breadcrumb {
-	cursor: pointer !important;
+/* Hand as cursor when hovering clickable elements */
+.markdown-source-view.mod-cm6 .code-block-flair,
+.markdown-rendered button.copy-code-button,
+.table-col-btn,
+.table-row-btn,
+.view-header-breadcrumb,
+.clickable-icon[aria-disabled="false"],
+.clickable-icon:not([aria-disabled]),
+.workspace-tab-header-inner,
+.workspace-tab-header-status-icon,
+.workspace-tab-header-inner-close-button,
+.tree-item-self.is-clickable,
+.search-input-clear-button {
+    /* Hand cursor on hover */
+    cursor: var(--cursor-link) !important;
 }
 
 /* ======================================== */
