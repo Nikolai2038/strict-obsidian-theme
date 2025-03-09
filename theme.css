@@ -612,17 +612,38 @@ pre {
 /* ======================================== */
 /* Copy code button in edit mode and in view mode */
 .copy-code-button, .code-block-flair {
+    /* Add border */
     border: var(--strict-separator);
+    /* Reduce padding */
+    padding: 0 4px !important;
 }
 
-/* Copy code button in edit mode and in view mode */
-.markdown-source-view.mod-cm6 .code-block-flair,
-.markdown-rendered button.copy-code-button {
-    padding: 4px 8px;
+/* Button position in view mode */
+.copy-code-button, .code-block-flair {
+    margin: 0 !important;
+}
+
+/* Button position in edit mode */
+.markdown-source-view.mod-cm6 .code-block-flair {
+    top: 0px;
+    right: 0px;
 }
 
 /* Make copy button always displayed in view mode */
+.markdown-rendered pre:hover > button.copy-code-button,
 .markdown-rendered pre:not(:hover) > button.copy-code-button {
+    display: block;
+}
+
+/* Remove copy icon from view mode (it is empty anyway, since we insert text) */
+.markdown-rendered pre:hover > button.copy-code-button > svg,
+.markdown-rendered pre:not(:hover) > button.copy-code-button > svg {
+    display: none;
+}
+
+/* Make copy button for usual text in edit mode same height as others */
+/* (I didn't find a way to replace it with "Text" label in edit mode) */
+.markdown-source-view.mod-cm6 .code-block-flair > svg {
     display: block;
 }
 /* ======================================== */
@@ -651,15 +672,15 @@ pre {
 }
 
 .language-powershell {
-    --language: "Powershell";
+    --language: "PowerShell";
 }
 
 .language-bash {
-    --language: "Bash";
+    --language: "bash";
 }
 
 .language-sh {
-    --language: "Sh";
+    --language: "sh";
 }
 
 .language-fortran {
