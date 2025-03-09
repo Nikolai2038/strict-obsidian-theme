@@ -755,7 +755,7 @@ pre {
 
 .image-embed img {
     /* Limit the height of images (both in editing mode and in viewing mode, BUT not in viewing mode of the image itself) */
-    max-height: 200px !important;
+    max-height: 300px !important;
     /* Border for images */
     border: var(--strict-separator);
 }
