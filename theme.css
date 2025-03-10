@@ -908,12 +908,15 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 /* ======================================== */
 /* Math */
 /* ======================================== */
+
+/* ---------------------------------------- */
+/* General */
+/* ---------------------------------------- */
 .math {
 	border-radius: var(--code-radius);
 }
 
 .math-block {
-	/* border: var(--strict-separator) !important; */
 	padding: 0 !important;
 }
 
@@ -922,9 +925,9 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 	padding: 2px 0 !important;
 }
 
-/* Remove extra empty line for math blocks in preview edit mode */
-.cm-s-obsidian .HyperMD-list-line.HyperMD-list-line-nobullet:has(+ .math-block > mjx-container) {
-    display: none;
+/* Make text not italic when editing math block */
+.cm-math {
+    font-style: normal !important;
 }
 
 /* Make math formulas same size as text */
@@ -932,4 +935,44 @@ span > mjx-container,
 .math-block {
     font-size: calc(var(--font-text-size) * 1.3) !important;
 }
+
+/* ---------------------------------------- */
+
+/* ---------------------------------------- */
+/* Math inline blocks */
+/* ---------------------------------------- */
+.cm-math {
+    background-color: var(--code-background) !important;
+	/* Imitates inline code - make same height */
+	padding-top: 0.16em;
+	padding-bottom: 0.16em;
+}
+
+/* Opening and closing "$" in edit mode */
+.cm-formatting.cm-formatting-math.cm-formatting-math-begin.cm-keyword.cm-math,
+.cm-formatting.cm-formatting-math.cm-formatting-math-end.cm-keyword.cm-math.cm-math- {
+	/* Imitates inline code */
+	padding-right: 0.1em;
+}
+/* ---------------------------------------- */
+
+/* ---------------------------------------- */
+/* Math full blocks */
+/* ---------------------------------------- */
+/* Remove extra empty line for math blocks in preview edit mode */
+.cm-s-obsidian .HyperMD-list-line.HyperMD-list-line-nobullet:has(+ .math-block > mjx-container) {
+    display: none;
+}
+
+/* Make background as code block when editing */
+div .cm-line:has(:first-child.cm-math) {
+    background-color: var(--code-background) !important;
+}
+
+/* Add same paddings as for code blocks */
+.cm-math:first-child {
+    padding: 0 var(--size-2-2) !important;
+}
+/* ---------------------------------------- */
+
 /* ======================================== */
