@@ -909,24 +909,27 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 /* Math */
 /* ======================================== */
 .math {
-	background-color: var(--code-background);
 	border-radius: var(--code-radius);
-	/* Imitates inline code */
-	padding: 0.1em 0.25em;
 }
 
 .math-block {
-	border: var(--strict-separator) !important;
-	font-size: large;
+	/* border: var(--strict-separator) !important; */
 	padding: 0 !important;
 }
 
 .MathJax {
-	padding: 12px 0 !important;
+    /* 2px is minimum to avoid showing sometimes scrollbars */
+	padding: 2px 0 !important;
 }
 
 /* Remove extra empty line for math blocks in preview edit mode */
 .cm-s-obsidian .HyperMD-list-line.HyperMD-list-line-nobullet:has(+ .math-block > mjx-container) {
     display: none;
+}
+
+/* Make math formulas same size as text */
+span > mjx-container,
+.math-block {
+    font-size: calc(var(--font-text-size) * 1.3) !important;
 }
 /* ======================================== */
