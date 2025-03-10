@@ -924,4 +924,9 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 .MathJax {
 	padding: 12px 0 !important;
 }
+
+/* Remove extra empty line for math blocks in preview edit mode */
+.cm-s-obsidian .HyperMD-list-line.HyperMD-list-line-nobullet:has(+ .math-block > mjx-container) {
+    display: none;
+}
 /* ======================================== */
