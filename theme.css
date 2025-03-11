@@ -964,14 +964,49 @@ span > mjx-container,
     display: none;
 }
 
-/* Make background as code block when editing */
-div .cm-line:has(:first-child.cm-math) {
+/* Code block line */
+div .cm-line:has(:first-child.cm-math),
+/* Line with opening "$$" */
+div .cm-line:has(.cm-formatting.cm-formatting-math.cm-formatting-math-begin.cm-keyword.cm-math.cm-math-block) {
+    /* Make background as code block when editing */
     background-color: var(--code-background) !important;
 }
 
-/* Add same paddings as for code blocks */
-.cm-math:first-child {
-    padding: 0 var(--size-2-2) !important;
+/* Line with opening "$$" */
+div .cm-line:has(.cm-formatting.cm-formatting-math.cm-formatting-math-begin.cm-keyword.cm-math.cm-math-block) {
+	/* Imitates inline code - make same height */
+	padding-top: 0.16em;
+}
+
+/* Line with closing "$$" */
+div .cm-line:has(.cm-formatting.cm-formatting-math.cm-formatting-math-end.cm-keyword.cm-math.cm-math-) {
+	/* Imitates inline code - make same height */
+	padding-bottom: 0.16em;
+}
+
+/* First math symbol in each line */
+.cm-math:first-child,
+/* "$$" */
+div .cm-line:has(.cm-formatting.cm-formatting-math.cm-formatting-math-begin.cm-keyword.cm-math.cm-math-block) > .cm-math:nth-child(2) {
+    /* Add same paddings as for code blocks */
+    padding-left: var(--size-2-2) !important;
+}
+.cm-math:last-child {
+    /* Add same paddings as for code blocks */
+    padding-right: var(--size-2-2) !important;
+}
+
+/* Math preview below editing code block */
+div.cm-line:has(.cm-formatting.cm-formatting-math.cm-formatting-math-end.cm-keyword.cm-math.cm-math-) + div.math.math-block.cm-embed-block {
+    /* Highlight */
+    background-color: var(--strict-color-3);
+    /* Add padding */
+    padding: 8px 0 !important;
+}
+
+/* Hide edit code button */
+.markdown-source-view.mod-cm6 .edit-block-button {
+    display: none;
 }
 /* ---------------------------------------- */
 
