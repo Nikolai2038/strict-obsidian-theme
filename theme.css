@@ -250,6 +250,20 @@ input, textarea {
     padding: 2px 0px 2px 20px !important;
 }
 
+/* "Folder Notes" plugin applies more CSS to File Explorer, so we change it too */
+.fn-whitespace-stop-collapsing .nav-folder-title-content {
+    padding-bottom: 2px !important;
+    padding-top: 2px !important;
+}
+
+/* Remove extra space when folding/unfolding empty folder */
+.tree-item-children {
+    margin-bottom: 0px;
+}
+.iconize-icon {
+    margin: 0px 4px 0px 0px !important;
+}
+
 /* ======================================== */
 /* App ribbon */
 /* ======================================== */
@@ -757,6 +771,38 @@ pre {
 
 .language-ini {
 	--language: "INI";
+}
+
+.language-obj {
+	--language: "Wavefront";
+}
+
+.language-x {
+	--language: "DirectX";
+}
+
+.language-dae {
+	--language: "COLLADA";
+}
+
+.language-gpg {
+	--language: "GPG Shell";
+}
+
+.language-ftp {
+	--language: "FTP Shell";
+}
+
+.language-gradle {
+	--language: "Gradle";
+}
+
+.language-glsl {
+	--language: "GLSL";
+}
+
+.language-psql {
+	--language: "PostgreSQL Shell";
 }
 
 /* Remove original text */
